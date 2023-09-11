@@ -1,0 +1,130 @@
+:root{
+    --darkgreen: hsl(158, 36%, 37%);
+    --darkblue: hsl(212, 21%, 14%);
+    --cinza: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --font-primaria: "Montserrat";
+    --font-secundaria: "Fraunces";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body, html{
+    height: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+img, picture, svg{
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-family: var(--font-primaria);
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--cinza);
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 600px;
+    gap: 1rem;   
+}
+
+.product-content{
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.product-category{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.product-title{
+    font-family: var(--font-secundaria);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--darkblue);
+}
+
+.flex-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+}
+
+.product-price{
+    font-family: var(--font-secundaria);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--darkgreen);
+}
+
+.button{
+    background-image: url(./images/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-color: var(--darkgreen);
+    border-radius: 15px;
+    border: none;
+    color: var(--white);
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.button:is(:hover, :focus){
+    background-color: var(--darkblue);
+    cursor: pointer;
+}
+
+.attribution{
+    margin-top: 5em;
+}
+
+@media screen and (max-width: 600px) {
+    .product{
+        display: grid;
+        margin: 3em;
+    }
+
+    .product-content{
+        padding: 2em;
+    }
+
+    .attribution{
+        display: none;
+    }
+}
+
+
+
